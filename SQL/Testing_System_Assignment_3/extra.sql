@@ -42,7 +42,7 @@ WHERE	ListPrice = (SELECT MIN(ListPrice)
                     
                     
                     
-												-- EXERCISE 2: JOIN NHIỀU BẢNG 
+					-- ```````````````````````EXERCISE 2: JOIN NHIỀU BẢNG `````````````````````````
 -- Question 1: Viết query lấy danh sách tên country và province
 SELECT c.`Name`, s.`Name` FROM countryregion c 
 JOIN stateprovince s
