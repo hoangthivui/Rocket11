@@ -35,11 +35,7 @@ FROM (SELECT DepartmentID, COUNT(AccountID)AS dem
 		GROUP BY DepartmentID)AS max);
         
 -- `````````QUESTION 5: TẠO VIEW CÓ CHỨA TẤT CÁC CÁC CÂU HỎI DO USER HỌ NGUYỄN TẠO``````````````````````
--- lay id cua account họ là nguyễn
-SELECT AccountID
-FROM `account`
-WHERE FullName LIKE '%nguyen%';
--- có 1 user họ 'mat'
+-- có 2 user họ 'mat'
 SELECT q.Content, a.FullName
 FROM  question q JOIN `account` a ON q.CreatorID=a.AccountID
 WHERE q.CreatorID=(SELECT AccountID
@@ -51,9 +47,6 @@ CREATE OR REPLACE VIEW vw_Que5
 AS
 SELECT Q.CategoryID, Q.Content, A.FullName AS Creator FROM question Q
 INNER JOIN `account` A ON A.AccountID = Q.CreatorID 
-WHERE SUBSTRING_INDEX( A.FullName, ' ', 1 ) = 'nguyen';
+WHERE SUBSTRING_INDEX( A.FullName, ' ', 1 ) = 'mat';
 SELECT * FROM vw_Que5;
-
-
-
 

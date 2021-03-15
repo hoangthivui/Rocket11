@@ -1,6 +1,6 @@
  -- Question 1: lấy ra tất cả các phòng ban
 SELECT * FROM `department`;
-    
+
 -- Question 2: lấy ra id của phòng ban có tên là "Sale"    
 SELECT 
     `DepartmentID`
@@ -37,7 +37,7 @@ SELECT *
  ORDER BY CreateDate DESC
  LIMIT 2;
  
- -- Question 8: Xóa tất cả các exam được tạo trước ngày 20/12/2019
+ -- Question 8: Xóa tất cả các exam được tạo trước ngày 29/10/2021
 DELETE FROM examquestion 
 WHERE
     ExamID IN (SELECT 
