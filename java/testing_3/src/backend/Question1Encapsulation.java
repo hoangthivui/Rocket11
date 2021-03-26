@@ -18,8 +18,18 @@ public class Question1Encapsulation {
 //	Demo các chức năng trên bằng class ở front-end.
 
 	public void quesStudent() {
-		Student student1 = new Student("abc", "abc");
-		student1.setAcedamicScore(8);
+		Student student1= new Student("hoàng nam", "thai binh");
+		student1.setAcedamicScore(7);
 		
+		Student student2= new Student("văn hanh", "thanh trì");
+		student2.setAcedamicScore(9);
+		
+		Student student3= new Student("Văn Hoàng", "hà nam");
+		student3.setAcedamicScore(5);
+		
+		student3.plusAcedamicScore(2);
+		System.out.println(student1);
+		System.out.println(student2);
+		System.out.println(student3);
 	}
 }
